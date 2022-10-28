@@ -1,11 +1,20 @@
+let sec=00;
+
 function start() {
-    console.log('iniciou')
+
+    setInterval(count,1000)
 }
 
 function pause() {
-    console.log('iniciou')
+    console.log('pausou')
 }
 
 function stop() {
-    console.log('iniciou')
+    console.log('parou')
+}
+
+function count() {
+    sec++;
+    document.getElementById("timer").innerText=sec;
+
 }
