@@ -1,29 +1,40 @@
-let sec=0;
-let min=0;
+let sec = 0;
+let min = 0;
+let hour = 0;
+
+let interval;
 
 function start() {
 
-    setInterval(count,10)
+    interval = setInterval(count,1)
 }
 
 function pause() {
 
-    console.log('pausou')
+    clearInterval(interval);
 }
 
 function stop() {
 
-    console.log('parou')
+    clearInterval(interval);
+    sec = 0;
+    min = 0;
+    document.getElementById("timer").innerText='00:00';
 }
 
 function count() {
 
     sec++;
-    if (sec==60) {
 
+    if (sec == 60) {
+        sec = 0;
         min++;
-        sec=0;
+
+        if (min == 60) {
+            min = 0;
+            hour++;
+        }
     }
 
-    document.getElementById("timer").innerText=min+':'+sec;
+    document.getElementById("timer").innerText=hour+':'+min+':'+sec;
 }
