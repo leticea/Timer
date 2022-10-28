@@ -4,9 +4,22 @@ let hour = 0;
 
 let interval;
 
+function twoDigits(digit) {
+
+    if (digit<10) {
+
+        return('0'+digit);
+
+    } else {
+        
+        return(digit);
+    }
+}
+
 function start() {
 
-    interval = setInterval(count,1)
+    count();
+    interval = setInterval(count,1000);
 }
 
 function pause() {
@@ -19,7 +32,7 @@ function stop() {
     clearInterval(interval);
     sec = 0;
     min = 0;
-    document.getElementById("timer").innerText='00:00';
+    document.getElementById("timer").innerText='00:00:00';
 }
 
 function count() {
@@ -36,5 +49,5 @@ function count() {
         }
     }
 
-    document.getElementById("timer").innerText=hour+':'+min+':'+sec;
+    document.getElementById("timer").innerText=twoDigits(hour)+':'+twoDigits(min)+':'+twoDigits(sec);
 }
