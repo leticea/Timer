@@ -30,7 +30,7 @@ Aula do canal [Leo Ujo](https://www.youtube.com/watch?v=msyTjg3t4Z8)
 ## 🚀 Como Rodar
 
 - Clone o projeto.
-- Entre no repositório e clice duas vezes no arquivo index.html
+- Entre no repositório e click duas vezes no arquivo index.html
 
 ## 🤔 Como contribuir
 
